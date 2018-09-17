@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -60,7 +61,7 @@
     </nav>
 
     <div class="login-form">
-        <form action="#" method="post">
+        <form th:action="@{login}" method="post">
             <h2 class="text-center">Войти в систему</h2>
             <div class="form-group">
                 <div class="input-group">
@@ -84,8 +85,6 @@
     </div>
 
 </div>
-
-
 
 <div class="container">
         <nav class="navbar navbar-default navbar-fixed-bottom navbar-inverse">
