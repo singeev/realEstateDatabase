@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
+
+    <style>
+        body {
+            margin-top: 50px;
+            background: #949494 url("https://www.transparenttextures.com/patterns/escheresque.png");
+        }
+
+        /*login form*/
+
+        .login-form {
+            width: 385px;
+            margin: 150px auto 30px;
+        }
+        .login-form form {
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+        .login-form h2 {
+            margin: 0 0 15px;
+        }
+        .form-control, .login-btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+
+        .login-btn {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container" id="main">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <p style="font-family:impact;font-size:170%;">
+                    1100
+                    <strong style="font-family:Segoe UI Light;">МЕТРОВ</strong>
+                </p>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Вход</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login-form">
+        <form action="#" method="post">
+            <h2 class="text-center">Войти в систему</h2>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" name="username" placeholder="Логин" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input type="password" class="form-control" name="password" placeholder="Пароль" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary login-btn btn-block">Вход</button>
+            </div>
+            <div class="clearfix">
+                <label class="pull-left checkbox-inline"><input type="checkbox"> Запомнить меня</label>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+
+<div class="container">
+        <nav class="navbar navbar-default navbar-fixed-bottom navbar-inverse">
+            <div class="container">
+                <p class="navbar-text pull-left">© 2018 - 1100metrov.ru</p>
+            </div>
+        </nav>
+</div>
+</div>
+
+
+</body>
+</html>
