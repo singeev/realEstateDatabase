@@ -1,0 +1,15 @@
+version: "3"
+services:
+  db:
+    container_name: "dbEstate"
+    image: postgres:9.5
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - POSTGRES_DB=estate
+    ports:
+    - "5432:5432"
+    volumes:
+    - estatedata:/var/lib/postgresql/data
+volumes:
+  estatedata:
