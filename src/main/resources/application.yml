@@ -1,0 +1,30 @@
+# ===============================
+# = Hibernate datasource
+# ===============================
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/estate
+    username: postgres
+    password: postgres
+
+  # ===============================
+  # = JPA configurations
+  # ===============================
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        default_schema: public
+
+# ===============================
+# = Logging configurations
+# ===============================
+logging:
+  level:
+    root: WARN
+    com.singeev: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG

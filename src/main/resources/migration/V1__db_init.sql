@@ -1,4 +1,4 @@
-CREATE TABLE public.users (
+CREATE TABLE public.user (
   id           SERIAL           NOT NULL PRIMARY KEY,
   first_name   VARCHAR(150)     NOT NULL,
   second_name  VARCHAR(150)     NOT NULL,
@@ -7,5 +7,15 @@ CREATE TABLE public.users (
   phone        VARCHAR(150)     NOT NULL,
   password     VARCHAR(150)     NOT NULL
 );
-CREATE INDEX index_users_id ON public.users (id);
-CREATE INDEX index_users_email ON public.users (email);
+CREATE INDEX index_user_id ON public.user (id);
+CREATE INDEX index_user_email ON public.user (email);
+
+CREATE TABLE public.role (
+  id   SERIAL       NOT NULL PRIMARY KEY,
+  name VARCHAR(50)  NOT NULL UNIQUE
+);
+
+CREATE TABLE public.users_roles (
+  user_id SERIAL       NOT NULL REFERENCES public.user (id),
+  role_id SERIAL       NOT NULL REFERENCES public.role (id)
+);
